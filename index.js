@@ -245,6 +245,36 @@ class WhatsappCloud {
         return response;
     }
 
+    async sendTemplate({recipientPhone, template, languageCode, components}) {
+        // to do: context is not working
+
+        this._mustHaverecipientPhone(recipientPhone);
+        let body = {
+            messaging_product: "whatsapp",
+            recipient_type: "individual",
+            to: recipientPhone,
+            type: 'template',
+            template: {
+                name: template,
+                language: {
+                    code: languageCode || "en_US"
+                },
+            }
+        }
+        if (components) {
+            body.template.components = components
+        }
+
+        console.log('body: ', body);
+        let response = await this._fetchAssistant({
+            url: '/messages',
+            method: 'POST',
+            body,
+        });
+
+        return response;
+    }
+
     async markMessageAsRead({ message_id }) {
         try {
             this._mustHaveMessageId(message_id);
