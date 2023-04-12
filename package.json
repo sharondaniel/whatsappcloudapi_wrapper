@@ -35,12 +35,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/daggieblanqx/whatsappcloudapi_wrapper.git"
+        "url": "git+https://github.com/sharondaniel/whatsappcloudapi_wrapper.git"
     },
     "bugs": {
-        "url": "https://github.com/daggieblanqx/whatsappcloudapi_wrapper/issues"
+        "url": "https://github.com/sharondaniel/whatsappcloudapi_wrapper/issues"
     },
-    "homepage": "https://github.com/daggieblanqx/whatsappcloudapi_wrapper#readme",
+    "homepage": "https://github.com/sharondaniel/whatsappcloudapi_wrapper#readme",
     "engines": {
         "node": ">=10"
     }
